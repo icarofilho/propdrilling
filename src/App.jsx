@@ -6,8 +6,11 @@ import "./App.css";
 function App() {
   const [num, setNum] = useState(0);
 
-  const handlerIncrease = () => setNum((n) => n + 1);
-
+  const handlerIncrease = () =>
+    setNum((n) => {
+      console.log(`você clicou ${n + 1} vezes`);
+      return n + 1;
+    });
   return (
     <>
       <div></div>
